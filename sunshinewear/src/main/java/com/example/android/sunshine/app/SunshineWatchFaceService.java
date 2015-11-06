@@ -509,6 +509,7 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
         }
 
         private void processConfig(DataMapItem dataMapItem){
+            if (dataMapItem == null) return;
             final DataMap config = dataMapItem.getDataMap();
             Log.e(TAG, "Processing config");
             if(config.containsKey("maxTemp")){
